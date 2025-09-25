@@ -38,7 +38,9 @@ const Penthouse = () => {
     return (
         <div className="bg-white shadow-md overflow-hidden flex flex-col md:flex-row md:px-12 lg:px-20 lg:py-5 items-center">
             {/* LEFT: Image / Carousel */}
-            <div className="w-full md:w-2/5 relative rounded-2xl px-5">
+            <div className="w-full md:w-2/5 relative rounded-2xl px-5"
+                style={{ touchAction: "pan-y" }}
+            >
                 <Carousel
                     autoPlay
                     infiniteLoop

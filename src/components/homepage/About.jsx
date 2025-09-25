@@ -10,7 +10,9 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-6 md:px-12 lg:px-20 py-5 lg:gap-10 items-center">
 
             {/* Left - Carousel (small devices upar, lg pe left) */}
-            <div className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-1 lg:order-1">
+            <div className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-1 lg:order-1"
+            style={{ touchAction: "pan-y" }}
+            >
                 <Carousel
                     autoPlay
                     infiniteLoop
