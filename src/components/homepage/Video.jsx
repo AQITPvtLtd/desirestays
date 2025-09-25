@@ -7,8 +7,6 @@ import { GrPrevious, GrNext } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 const videos = [
-    // "/videos/IMG_3341.MOV",
-    // "/videos/IMG_3347.MOV",
     "/videos/IMG_3352.MOV",
     "/videos/IMG_3353.MOV",
     "/videos/IMG_3368.MOV",
@@ -16,7 +14,6 @@ const videos = [
     "/videos/IMG_3478.MOV",
 ];
 
-// Custom Arrows
 const CustomPrevArrow = ({ onClick }) => (
     <button
         onClick={onClick}
@@ -39,7 +36,6 @@ const Video = () => {
     const sliderRef = useRef(null);
     const playersRef = useRef([]);
 
-    // Pause all other videos when one is playing
     const pauseAllExcept = (current) => {
         playersRef.current.forEach((video) => {
             if (video && video !== current && !video.paused) {
@@ -49,7 +45,6 @@ const Video = () => {
     };
 
     useEffect(() => {
-        // cleanup on unmount
         return () => {
             playersRef.current = [];
         };
@@ -60,16 +55,39 @@ const Video = () => {
         infinite: true,
         centerMode: true,
         centerPadding: "0px",
-        slidesToShow: 3,
+        slidesToShow: 3, // Desktop default
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
         arrows: false,
         responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true } },
-            { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false } },
+            {
+                breakpoint: 1024, // Tablet
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 768, // Mobile
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,   // ✅ force disable centermode
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 220, // Extra small mobile
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    centerPadding: "0px",
+                },
+            },
         ],
     };
+
 
     return (
         <div className="py-10">
@@ -97,7 +115,6 @@ const Video = () => {
                                         pauseAllExcept(e.target);
                                     }}
                                     onPause={() => {
-                                        // resume autoplay only if no video is playing
                                         const anyPlaying = playersRef.current.some(
                                             (v) => v && !v.paused
                                         );
@@ -112,7 +129,6 @@ const Video = () => {
                     ))}
                 </Slider>
 
-                {/* Navigation Arrows */}
                 <div className="flex justify-center gap-4 mt-6">
                     <CustomPrevArrow onClick={() => sliderRef.current?.slickPrev()} />
                     <CustomNextArrow onClick={() => sliderRef.current?.slickNext()} />
