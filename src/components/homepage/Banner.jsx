@@ -9,7 +9,7 @@ const Banner = () => {
     return (
         <div>
             {/* Hide on small screens, show on md and larger */}
-            <div className="banner-carousel inset-0 hidden sm:block">
+            <div className="banner-carousel inset-0">
                 <Carousel
                     autoPlay
                     infiniteLoop
@@ -22,7 +22,7 @@ const Banner = () => {
                     {/* Image 1 */}
                     <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[630px]">
                         <Image
-                            src="/banner/banner1.jpg"
+                            src="/banner/banner1.png"
                             alt="Banner 1"
                             fill
                             priority
@@ -33,7 +33,7 @@ const Banner = () => {
                     {/* Image 2 */}
                     <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[630px]">
                         <Image
-                            src="/banner/banner2.jpg"
+                            src="/banner/banner2.png"
                             alt="Banner 2"
                             fill
                             priority
@@ -44,35 +44,13 @@ const Banner = () => {
                     {/* Image 3 */}
                     <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[630px]">
                         <Image
-                            src="/banner/banner3.jpg"
+                            src="/banner/banner3.png"
                             alt="Banner 3"
                             fill
                             priority
                             className="object-cover"
                         />
-                    </div>
-
-                    {/* Image 4 */}
-                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[630px]">
-                        <Image
-                            src="/banner/banner4.jpg"
-                            alt="Banner 4"
-                            fill
-                            priority
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Image 5 */}
-                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[630px]">
-                        <Image
-                            src="/banner/banner5.jpeg"
-                            alt="Banner 5"
-                            fill
-                            priority
-                            className="object-cover"
-                        />
-                    </div>
+                    </div> 
                 </Carousel>
             </div>
         </div>

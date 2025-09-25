@@ -36,9 +36,9 @@ const Dreamdesire = () => {
     };
 
     return (
-        <div className="bg-white shadow-md overflow-hidden flex flex-col md:flex-row md:px-12 lg:px-20 py-10 items-center">
+        <div className="bg-white shadow-md overflow-hidden flex flex-col md:flex-row md:px-12 lg:px-20 py-5 items-center">
             {/* LEFT: Image / Carousel */}
-            <div className="w-full md:w-2/5 relative rounded-2xl">
+            <div className="w-full md:w-2/5 relative rounded-2xl px-5">
                 <Carousel
                     autoPlay
                     infiniteLoop
@@ -74,7 +74,7 @@ const Dreamdesire = () => {
             {/* RIGHT: Info */}
             <div className="p-6 flex flex-col justify-between w-full md:w-1/2">
                 <div>
-                    <h2 className="text-2xl font-semibold mt-2">{title}</h2>
+                    <h2 className="text-2xl font-semibold mt-2 dark:text-black">{title}</h2>
                     <p className="text-gray-500">{location}</p>
 
                     <div className="flex flex-wrap items-center gap-4 mt-4 text-gray-700 text-sm">
@@ -94,7 +94,7 @@ const Dreamdesire = () => {
 
                     <div className="mt-4 text-xl font-semibold text-gray-900">
                         ₹{pricePerNight.toLocaleString()}{" "}
-                        <span className="text-sm font-normal">/ night + GST</span>
+                        <span className="text-sm font-normal">/ night</span>
                     </div>
 
                     {/* Amenities */}
@@ -102,7 +102,7 @@ const Dreamdesire = () => {
                         {amenities.map((amen, idx) => (
                             <span
                                 key={idx}
-                                className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm"
+                                className="flex items-center dark:text-black gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm"
                             >
                                 {getAmenityIcon(amen)}
                                 <span>{amen}</span>
@@ -112,7 +112,7 @@ const Dreamdesire = () => {
 
                     <div className="mt-4">
                         <Link
-                            className="cursor-pointer font-semibold text-sm px-6 py-2 rounded-xl border-2 mt-2 border-[#9b4a2d] transition duration-300 hover:scale-105 hover:bg-gray-300 hover:text-[#9b4a2d]"
+                            className="cursor-pointer dark:text-black font-semibold text-sm px-6 py-2 rounded-xl border-2 mt-2 border-[#9b4a2d] transition duration-300 hover:scale-105 hover:bg-gray-300 hover:text-[#9b4a2d]"
                             href="https://www.airbnb.co.in/rooms/1220828342541295558?guests=1&adults=1&s=39&unique_share_id=a9afef2b-b375-453a-a853-19d84debf56a"
                             target="_blank"
                         >

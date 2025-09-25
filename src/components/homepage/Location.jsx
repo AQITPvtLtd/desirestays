@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,19 +71,23 @@ const Location = () => {
     return (
         <div className="mt-16 px-4 lg:px-10">
             <div className="text-center mb-8">
-                <h2
-                    className="text-4xl font-bold leading-tight"
+
+                <motion.h2
+                    className="text-3xl md:text-4xl font-bold text-center text-black mb-5"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                     style={{ fontFamily: "Roboto Slab, serif" }}
                 >
                     Our Locations
-                </h2>
+                </motion.h2>
             </div>
 
             {/* Top row (2 maps) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-hidden">
                 <div ref={leftRef} className="text-center">
                     <h1
-                        className="text-2xl font-bold mb-4"
+                        className="text-2xl font-bold mb-4 dark:text-black"
                         style={{ fontFamily: "Roboto Slab, serif" }}
                     >
                         {locations[0].title}
@@ -101,7 +106,7 @@ const Location = () => {
 
                 <div ref={rightRef} className="text-center">
                     <h1
-                        className="text-2xl font-bold mb-4"
+                        className="text-2xl font-bold mb-4 dark:text-black"
                         style={{ fontFamily: "Roboto Slab, serif" }}
                     >
                         {locations[1].title}
@@ -123,7 +128,7 @@ const Location = () => {
             <div className="py-10 flex justify-center overflow-hidden">
                 <div ref={bottomRef} className="w-full md:w-3/4 lg:w-2/3 text-center">
                     <h1
-                        className="text-2xl font-bold mb-4"
+                        className="text-2xl font-bold mb-4 dark:text-black"
                         style={{ fontFamily: "Roboto Slab, serif" }}
                     >
                         {locations[2].title}

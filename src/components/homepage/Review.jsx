@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
 import { motion } from "framer-motion";
 
-// Swiper CSS
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
@@ -51,17 +50,31 @@ export default function Review() {
                     navigation
                     spaceBetween={30}
                     breakpoints={{
-                        320: {
+                        320: { // Mobile
                             slidesPerView: 1,
-                            spaceBetween: 20,
+                            spaceBetween: 10,
+                            coverflowEffect: {
+                                rotate: 0,
+                                stretch: 0,
+                                depth: 50,
+                                modifier: 1,
+                                slideShadows: false,
+                            },
                         },
                         640: {
-                            slidesPerView: 1.3,
-                            spaceBetween: 25,
+                            slidesPerView: 1,
+                            spaceBetween: 15,
+                            coverflowEffect: {
+                                rotate: 0,
+                                stretch: 0,
+                                depth: 60,
+                                modifier: 1,
+                                slideShadows: false,
+                            },
                         },
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 30,
+                            spaceBetween: 25,
                         },
                         1024: {
                             slidesPerView: 3,

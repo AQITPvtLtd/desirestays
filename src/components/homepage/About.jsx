@@ -7,10 +7,10 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-6 md:px-12 lg:px-20 py-10 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-6 md:px-12 lg:px-20 py-5 lg:gap-10 items-center">
 
-            {/* Left - Carousel (small pe niche, lg pe left) */}
-            <div className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
+            {/* Left - Carousel (small devices upar, lg pe left) */}
+            <div className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-1 lg:order-1">
                 <Carousel
                     autoPlay
                     infiniteLoop
@@ -41,8 +41,8 @@ const About = () => {
                 </Carousel>
             </div>
 
-            {/* Right - Text (small pe upar, lg pe right) */}
-            <div className="p-6 flex flex-col justify-center text-center lg:text-left order-1 lg:order-2">
+            {/* Right - Text (small devices niche, lg pe right) */}
+            <div className="p-6 flex flex-col justify-center text-center lg:text-left order-2 lg:order-2">
                 <h2
                     className="text-2xl md:text-3xl lg:text-4xl font-bold text-black"
                     style={{ fontFamily: "Playfair Display, serif" }}
@@ -58,4 +58,3 @@ const About = () => {
 };
 
 export default About;
-

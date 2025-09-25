@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
     try {
-
         const formData = await request.formData();
         const fullname = formData.get("fullname");
         const phone = formData.get("phone");
@@ -12,31 +11,32 @@ export async function POST(request) {
         const location = formData.get("location");
         const message = formData.get("message");
 
-        // const unique_id = uuid();
-
         // ✅ Insert into Database
         await pool.execute(
-            "INSERT INTO contact (date,  name, phone, email, location, message) VALUES (NOW(), ?, ?, ?, ?, ?)",
+            "INSERT INTO contact (date, name, phone, email, location, message) VALUES (NOW(), ?, ?, ?, ?, ?)",
             [fullname, phone, email, location, message]
-        )
+        );
 
         // ✅ Nodemailer Transporter
         const transporter = nodemailer.createTransport({
             service: "gmail",
             host: "smtp.gmail.com",
+            port: 465,
             secure: true,
             auth: {
                 user: process.env.MY_EMAIL,
                 pass: process.env.GMAIL_PASS
+            },
+            tls: {
+                rejectUnauthorized: false // self-signed SSL allow
             }
-        })
+        });
 
-
-        // ✅ Admin Email with Attachment
+        // ✅ Admin Email
         const mailOptionsAdmin = {
             from: process.env.MY_EMAIL,
             to: process.env.MY_EMAIL,
-            subject: "Aakash Cinema Contact Form",
+            subject: "Desire Stays Contact Form", // 🔥 Updated
             html: `
             <html>
               <body>
@@ -45,37 +45,36 @@ export async function POST(request) {
                 <p>${message}</p>
               </body>
             </html>`
-        }
+        };
 
-        // ✅ Send Email to Admin
         await transporter.sendMail(mailOptionsAdmin);
 
         // ✅ User Confirmation Email
         const mailOptionsUser = {
             from: process.env.MY_EMAIL,
             to: email,
-            subject: "Thank You for contacting Aakash Cinema",
+            subject: "Thank You for contacting Desire Stays", // 🔥 Updated
             html: `
             <html>
               <body>
-                <h3>Thank you for contacting Aakash Cinema, ${fullname}!</h3>
+                <h3>Thank you for contacting Desire Stays, ${fullname}!</h3>
                 <p>We have received your message and will get back to you shortly.</p>
               </body>
             </html>`
-        }
+        };
 
         await transporter.sendMail(mailOptionsUser);
 
         return NextResponse.json({
             message: "Query sent successfully",
             success: true
-        })
+        });
 
     } catch (error) {
         console.log(error);
         return NextResponse.json({
             message: "Failed to send query",
             success: false
-        })
+        });
     }
 }
