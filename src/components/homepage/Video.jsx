@@ -80,7 +80,6 @@ const Video = () => {
         ],
     };
 
-
     return (
         <div className="py-10">
             <motion.h2

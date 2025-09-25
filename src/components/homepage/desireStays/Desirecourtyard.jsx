@@ -48,10 +48,10 @@ const Desirecourtyard = () => {
                     infiniteLoop
                     showThumbs={false}
                     showStatus={false}
-                    interval={4000}
-                    swipeable
-                    emulateTouch
-                    stopOnHover
+                    interval={3000}
+                    swipeable={false}
+                    emulateTouch={false}
+                    stopOnHover={false}
                     useKeyboardArrows
                 >
                     {images.map((src, idx) => (

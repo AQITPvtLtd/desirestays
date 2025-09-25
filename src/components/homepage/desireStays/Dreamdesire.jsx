@@ -46,10 +46,10 @@ const Dreamdesire = () => {
                     infiniteLoop
                     showThumbs={false}
                     showStatus={false}
-                    interval={4000}
-                    swipeable
-                    emulateTouch
-                    stopOnHover
+                    interval={3000}
+                    swipeable={false}
+                    emulateTouch={false}
+                    stopOnHover={false}
                     useKeyboardArrows
                 >
                     {images.map((src, idx) => (
@@ -64,11 +64,6 @@ const Dreamdesire = () => {
                         </div>
                     ))}
                 </Carousel>
-
-                {/* Heart / Favorite */}
-                {/* <button className="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:scale-105 transition z-10">
-                               <AiFillHeart className="text-gray-600 text-xl" />
-                           </button> */}
 
 
             </div>
