@@ -129,7 +129,7 @@ const Form = () => {
                 <textarea
                     className="border-b-1 border-[#9b4a2d] px-1 py-2 w-full outline-none placeholder-gray-500 text-sm sm:text-base transition resize-none"
                     placeholder="Message..."
-                    rows="2"
+                    rows="1"
                     id="message"
                     name="message"
                     value={formData.message}

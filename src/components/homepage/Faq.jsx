@@ -73,14 +73,24 @@ const Faq = () => {
     };
 
     return (
-        <section className="max-w-3xl mx-auto py-10 px-6">
+        <section className="max-w-3xl mx-auto pt-10 px-6">
             <div className="text-center mb-12">
-                <h2
+                {/* <h2
                     className="text-4xl font-bold leading-tight"
                     style={{ fontFamily: "Roboto Slab, serif" }}
                 >
+                  
+                </h2> */}
+
+                <motion.h2
+                    className="text-3xl md:text-4xl font-bold text-center text-black mb-5"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    style={{ fontFamily: "Roboto Slab, serif" }}
+                >
                     Frequently Asked <br /> Questions
-                </h2>
+                </motion.h2>
             </div>
 
             {/* FAQ list with animation */}

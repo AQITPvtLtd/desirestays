@@ -7,6 +7,7 @@ import { MdWork } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
 
 const Penthouse = () => {
     const images = [
@@ -111,12 +112,15 @@ const Penthouse = () => {
                         ))}
                     </div>
 
-                    <button
-                        className="cursor-pointer font-semibold text-sm px-6 py-2 rounded-xl border-2 mt-2 border-[#9b4a2d] transition duration-300 hover:scale-105 hover:bg-gray-300 hover:text-[#9b4a2d]"
-                        href="/"
-                    >
-                       Book Now
-                    </button>
+                    <div className="mt-4">
+                        <Link
+                            className="cursor-pointer font-semibold text-sm px-6 py-2 rounded-xl border-2 border-[#9b4a2d] transition duration-300 hover:scale-105 hover:bg-gray-300 hover:text-[#9b4a2d]"
+                            href="https://www.airbnb.co.in/rooms/1326668670351387015?guests=1&adults=1&s=39&unique_share_id=92ca07e8-9999-4186-81a1-962731bfba66"
+                            target="_blank"
+                        >
+                            Book Now
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

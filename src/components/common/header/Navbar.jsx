@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const Navbar = () => {
     return (
@@ -22,10 +22,11 @@ const Navbar = () => {
 
                 {/* Contact Info */}
                 <div className="flex flex-col md:flex-row items-center md:gap-6 gap-2 text-sm md:text-base">
+
                     {/* Phone Numbers */}
                     <div className="flex items-center gap-2">
                         <FaPhoneAlt className="text-gray-700" />
-                        <Link href="tel:9990709172" className="hover:te xt-blue-600">
+                        <Link href="tel:9990709172" className="hover:text-blue-600">
                             9990709172
                         </Link>
                         <span className="hidden md:inline">,</span>
@@ -44,6 +45,18 @@ const Navbar = () => {
                             desireventss@gmail.com
                         </Link>
                     </div>
+
+                    {/* Instagram */}
+
+                    <Link
+                        href="https://www.instagram.com/desires_co_in?igsh=MTB5MXFzeWVjNDQ4ZQ=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-pink-600"
+                    >
+                        <FaInstagram className="text-pink-600 text-lg" />
+                    </Link>
+
                 </div>
             </div>
         </nav>

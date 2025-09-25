@@ -16,8 +16,10 @@ const locations = [
     },
     {
         title: "Dream Desire",
-        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.355098696273!2d77.1981072!3d28.5590978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3aa57f99aa5%3A0xd10a1cf1ee8252df!2sDream%20Desire!5e0!3m2!1sen!2sin!4v1758698310792!5m2!1sen!2sin",
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.355098696273!2d77.1981072!3d28.5590978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3aa57f99aa5%3A0xd10a1cf1ee8252df!2sDream%20Desire!5e0!3m2!1sen!2sin!4v1758775573643!5m2!1sen!2sin",
     },
+
+
 ];
 
 const Location = () => {
