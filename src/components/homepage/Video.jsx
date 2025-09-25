@@ -77,14 +77,6 @@ const Video = () => {
                     centerPadding: "0px",
                 },
             },
-            {
-                breakpoint: 220, // Extra small mobile
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: false,
-                    centerPadding: "0px",
-                },
-            },
         ],
     };
 
