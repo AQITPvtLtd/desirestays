@@ -50,36 +50,10 @@ export default function Review() {
                     navigation
                     spaceBetween={30}
                     breakpoints={{
-                        320: { // Mobile
-                            slidesPerView: 1,
-                            spaceBetween: 10,
-                            coverflowEffect: {
-                                rotate: 0,
-                                stretch: 0,
-                                depth: 50,
-                                modifier: 1,
-                                slideShadows: false,
-                            },
-                        },
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 15,
-                            coverflowEffect: {
-                                rotate: 0,
-                                stretch: 0,
-                                depth: 60,
-                                modifier: 1,
-                                slideShadows: false,
-                            },
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 25,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        },
+                        320: { slidesPerView: 1, spaceBetween: 10 },
+                        640: { slidesPerView: 1, spaceBetween: 15 },
+                        768: { slidesPerView: 2, spaceBetween: 25 },
+                        1024: { slidesPerView: 3, spaceBetween: 40 },
                     }}
                     coverflowEffect={{
                         rotate: 0,
@@ -88,7 +62,7 @@ export default function Review() {
                         modifier: 1.3,
                         slideShadows: false,
                     }}
-                    className="pb-10"
+                    className="pb-10 relative"
                 >
                     {images.map((src, index) => (
                         <SwiperSlide key={index} className="flex justify-center">
@@ -104,6 +78,29 @@ export default function Review() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
+                {/* Custom CSS for navigation buttons */}
+                <style jsx global>{`
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        color: #000; /* arrow color */
+                        width: 30px;
+                        height: 30px;
+                        top: 50%; /* center vertically */
+                        transform: translateY(-50%);
+                    }
+                    .swiper-button-next {
+                        right: -40px; /* outside right */
+                    }
+                    .swiper-button-prev {
+                        left: -40px; /* outside left */
+                    }
+                    .swiper-button-next::after,
+                    .swiper-button-prev::after {
+                        font-size: 18px !important; /* smaller arrow icon */
+                        font-weight: bold;
+                    }
+                `}</style>
             </div>
         </section>
     );
