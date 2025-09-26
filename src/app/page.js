@@ -10,7 +10,7 @@ import Video from "@/components/homepage/Video";
 export default function Home() {
   return (
 
-    <main className="mt-[125px]">
+    <main className="mt-[95px] md:mt-[105px]">
       <Banner />
       <div className="bg-[#eee1d8]">
         <About />
