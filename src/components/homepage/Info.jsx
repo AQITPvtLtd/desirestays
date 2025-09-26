@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa"; // WhatsApp icon
 
 const Info = () => {
@@ -51,6 +51,17 @@ const Info = () => {
                     className="hover:text-blue-600 break-words"
                 >
                     desireventss@gmail.com
+                </Link>
+            </div>
+            <div className="flex justify-center items-center gap-2 text-gray-800">
+                <FaInstagram className="text-pink-600" />
+                <Link
+                    href="https://www.instagram.com/desires_co_in?igsh=MTB5MXFzeWVjNDQ4ZQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-pink-600"
+                >
+                    desires_co_in
                 </Link>
             </div>
         </div>
