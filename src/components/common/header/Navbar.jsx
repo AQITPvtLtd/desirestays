@@ -6,7 +6,7 @@ import { FaPhoneAlt, FaEnvelope, FaInstagram } from "react-icons/fa";
 const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full bg-white dark:bg-white shadow-md z-50 transition-colors duration-300">
-            <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-3 gap-3 md:gap-6">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-1 gap-3 md:gap-6">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
