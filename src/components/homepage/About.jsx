@@ -9,9 +9,10 @@ const About = () => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-6 md:px-12 lg:px-20 py-5 lg:gap-10 items-center">
 
-            {/* Left - Carousel (small devices upar, lg pe left) */}
-            <div className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-1 lg:order-1"
-            style={{ touchAction: "pan-y" }}
+            {/* Carousel - small devices niche, lg pe left */}
+            <div
+                className="banner-carousel relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1 lg:block hidden"
+                style={{ touchAction: "pan-y" }}
             >
                 <Carousel
                     autoPlay
@@ -43,8 +44,8 @@ const About = () => {
                 </Carousel>
             </div>
 
-            {/* Right - Text (small devices niche, lg pe right) */}
-            <div className="p-6 flex flex-col justify-center text-center lg:text-left order-2 lg:order-2">
+            {/* Text - small devices upar, lg pe right */}
+            <div className="p-6 flex flex-col justify-center text-center lg:text-left order-1 lg:order-2">
                 <h2
                     className="text-2xl md:text-3xl lg:text-4xl font-bold text-black"
                     style={{ fontFamily: "Playfair Display, serif" }}
@@ -52,7 +53,7 @@ const About = () => {
                     About Us
                 </h2>
                 <p className="text-black text-base md:text-lg leading-relaxed lg:text-justify mt-4">
-                    Welcome to Desire Stays, where every stay transforms into a memorable experience. We specialize in offering premium vacation rentals and luxury properties that combine comfort, elegance, and modern amenities. Whether you’re planning a romantic getaway, a family vacation, or a solo retreat, our curated stays provide the perfect blend of style and convenience. At Desire Stays, your comfort is our priority, and every detail is designed to make you feel at home only better.
+                    Welcome to Desire Stays, where every stay transforms into a memorable experience. We specialize in offering premium vacation rentals and luxury properties that combine comfort, elegance, and modern amenities. Whether you’re planning a romantic getaway, a family vacation, or a solo retreat, our curated stays provide the perfect blend of style and convenience. At Desire Stays, your comfort is our priority, and every detail is designed to make you feel at home — only better.
                 </p>
             </div>
         </div>
