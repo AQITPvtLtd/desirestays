@@ -11,9 +11,12 @@ import Link from "next/link";
 
 const Penthouse = () => {
     const images = [
-        "/penthouse/img1.avif",
-        "/penthouse/img3.avif",
-        "/penthouse/img5.webp",
+        "/penthouse/first.jpg",
+        "/penthouse/second.jpg",
+        "/penthouse/third.jpg",
+        "/penthouse/fourth.jpg",
+        "/penthouse/fifth.jpg",
+        "/penthouse/sixth.jpg",
     ];
 
     const title = "Desire Penthouse";

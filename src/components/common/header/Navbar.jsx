@@ -6,10 +6,10 @@ import { FaPhoneAlt, FaEnvelope, FaInstagram, FaWhatsapp } from "react-icons/fa"
 const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-colors duration-300">
-            <div className="w-full flex items-center justify-between px-4 md:px-10 py-2">
+            <div className="w-full flex flex-col md:flex-row items-center md:items-center justify-between px-4 md:px-10 py-2">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center">
+                <Link href="/" className="flex justify-center md:justify-start items-center">
                     <Image
                         src="/logo/newdesirelogo.png"
                         alt="Desire Stays Logo"
@@ -22,15 +22,11 @@ const Navbar = () => {
 
                 {/* Desktop / Tablet View */}
                 <div className="hidden md:flex items-start gap-10 text-sm md:text-base text-gray-800">
-
                     {/* Phone + WhatsApp */}
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <FaPhoneAlt className="text-gray-700" />
-                            <Link
-                                href="tel:9990909172"
-                                className="hover:text-blue-600"
-                            >
+                            <Link href="tel:9990909172" className="hover:text-blue-600">
                                 9990909172
                             </Link>
                         </div>
@@ -50,10 +46,7 @@ const Navbar = () => {
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <FaEnvelope className="text-gray-700" />
-                            <Link
-                                href="mailto:desireventss@gmail.com"
-                                className="hover:text-blue-600"
-                            >
+                            <Link href="mailto:desireventss@gmail.com" className="hover:text-blue-600">
                                 desireventss@gmail.com
                             </Link>
                         </div>
@@ -72,7 +65,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile View (<768px) */}
-                <div className="flex md:hidden items-center gap-4 text-lg">
+                <div className="flex md:hidden justify-center gap-6 mt-3 text-xl text-gray-700">
                     <Link href="tel:9990909172" className="hover:text-blue-600">
                         <FaPhoneAlt />
                     </Link>

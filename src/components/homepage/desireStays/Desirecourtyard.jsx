@@ -12,9 +12,13 @@ import Link from "next/link";
 const Desirecourtyard = () => {
 
     const images = [
-        "/banner/banner1.png",
-        "/banner/banner2.png",
-        "/banner/banner3.png",
+        "/courtyard/sec.jpg",
+        "/courtyard/third.jpg",
+        "/courtyard/fourth.jpg",
+        "/courtyard/fifth.jpg",
+        "/courtyard/sixth.jpg",
+        "/courtyard/seventh.jpg",
+        "/courtyard/nine.jpg",
     ];
 
     const title = "Desire Courtyard";
