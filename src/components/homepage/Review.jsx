@@ -25,6 +25,13 @@ export default function Review() {
         "/reviews/IMG_5050.PNG",
         "/reviews/IMG_5051.PNG",
         "/reviews/IMG_5052.PNG",
+        "/reviews/review1.jpeg",
+        "/reviews/review2.jpeg",
+        "/reviews/review3.jpeg",
+        "/reviews/review4.jpeg",
+        "/reviews/review5.jpeg",
+        "/reviews/review6.jpeg",
+        "/reviews/review7.jpeg",
     ];
 
     return (

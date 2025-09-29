@@ -11,9 +11,10 @@ import Link from "next/link";
 
 const Dreamdesire = () => {
     const images = [
-        "/dreamdesire/img1.avif",
         "/dreamdesire/img2.avif",
+        "/dreamdesire/img1.avif",
         "/dreamdesire/img3.avif",
+        "/dreamdesire/fourth.webp"
     ];
 
     const title = "Dream Desire";

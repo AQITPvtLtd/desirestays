@@ -50,7 +50,7 @@ const Banner = () => {
                             priority
                             className="object-cover"
                         />
-                    </div> 
+                    </div>
                 </Carousel>
             </div>
         </div>
