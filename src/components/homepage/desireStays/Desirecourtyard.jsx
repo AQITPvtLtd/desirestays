@@ -122,8 +122,10 @@ export default function Desirecourtyard() {
                         showThumbs={false}
                         showStatus={false}
                         interval={3000}
-                        swipeable
-                        emulateTouch
+                        swipeable={false}
+                        emulateTouch={false}
+                        stopOnHover={false}
+                        useKeyboardArrows
                     >
                         {active.images.map((src, idx) => (
                             <div key={idx} className="relative w-full h-[360px] sm:h-[420px]">
