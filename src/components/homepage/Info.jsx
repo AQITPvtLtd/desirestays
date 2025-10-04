@@ -24,8 +24,8 @@ const Info = () => {
                 {/* Call */}
                 <div className="flex items-center gap-2">
                     <FaPhoneAlt className="text-gray-700" />
-                    <Link href="tel:9990709172" className="hover:text-blue-600">
-                        9990709172
+                    <Link href="tel:+919990709172" className="hover:text-blue-600">
+                       +91 9990709172
                     </Link>
                 </div>
 
@@ -33,12 +33,12 @@ const Info = () => {
                 <div className="flex items-center gap-2">
                     <FaWhatsapp className="text-green-600" />
                     <Link
-                        href="https://wa.me/9990909172"
+                        href="https://wa.me/+919990909172"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-blue-600"
                     >
-                        9990909172
+                       +91 9990909172
                     </Link>
                 </div>
             </div>

@@ -26,18 +26,18 @@ const Navbar = () => {
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <FaPhoneAlt className="text-gray-700" />
-                            <Link href="tel:9990909172" className="hover:text-blue-600">
-                                9990909172
+                            <Link href="tel:+919990909172" className="hover:text-blue-600">
+                               +91 9990909172
                             </Link>
                         </div>
                         <div className="flex items-center gap-2">
                             <FaWhatsapp className="text-green-600" />
                             <Link
-                                href="https://wa.me/9990709172"
+                                href="https://wa.me/+919990709172"
                                 target="_blank"
                                 className="hover:text-green-600"
                             >
-                                9990709172
+                               +91 9990709172
                             </Link>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
                 {/* Mobile View (<768px) */}
                 <div className="flex md:hidden justify-center gap-6 mt-3 text-xl text-gray-700">
-                    <Link href="tel:9990909172" className="hover:text-blue-600">
+                    <Link href="tel:+919990909172" className="hover:text-blue-600">
                         <FaPhoneAlt />
                     </Link>
                     <Link href="https://wa.me/9990709172" target="_blank" className="hover:text-green-600">
