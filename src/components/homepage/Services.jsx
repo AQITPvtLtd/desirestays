@@ -15,8 +15,8 @@ const Services = () => {
                 </h2>
                 <p className='text-center py-2 dark:text-black'>Experience luxury, comfort, and serenity with stylish penthouses, family-friendly retreats, <br /> and peaceful courtyards for unforgettable getaways.</p>
             </div>
-            <Penthouse />
             <Desirecourtyard />
+            <Penthouse />
             <Dreamdesire />
         </div>
     )
