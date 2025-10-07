@@ -218,7 +218,7 @@ export default function Desirecourtyard() {
                         href={active.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block px-6 py-2 rounded-xl border-2 border-[#9b4a2d] text-[#9b4a2d] font-semibold hover:bg-[#9b4a2d] hover:text-white transition"
+                        className="cursor-pointer dark:text-black font-semibold text-sm px-6 py-2 rounded-xl border-2 mt-2 border-[#9b4a2d] transition duration-300 hover:scale-105 hover:bg-gray-300 hover:text-[#9b4a2d]"
                     >
                         Book Now
                     </Link>
