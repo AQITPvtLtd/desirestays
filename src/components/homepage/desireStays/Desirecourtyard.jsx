@@ -13,7 +13,7 @@ const courtyards = [
         id: "1.0",
         title: "Courtyard 1.0",
         images: [
-            "/courtyard/sec.jpg",
+            
             "/courtyard/third.jpg",
             "/banner/newbanner.jpeg",
             "/courtyard/barthboom.jpeg",
@@ -23,7 +23,6 @@ const courtyards = [
             "/courtyard/fifth.jpg",
             "/courtyard/sixth.jpeg",
             "/courtyard/seventh.jpg",
-            "/courtyard/nine.jpg",
         ],
         fits: "8–10 Guests",
         bedrooms: 3,

@@ -75,8 +75,12 @@ const Banner = () => {
     }, []);
 
     const images = [
-        "/banner/banner1.png",
+        // "/banner/banner1.png",
         "/banner/banner2.jpeg",
+        "/banner/homebanner1.jpeg",
+        "/banner/homebanner2.jpeg",
+        "/banner/homebanner3.jpeg",
+        "/banner/homebanner4.jpeg",
         "/banner/banner3.jpeg",
         "/banner/banner4.jpeg",
         "/banner/banner5.jpeg",
