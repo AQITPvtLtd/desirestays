@@ -7,34 +7,27 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { GrPrevious, GrNext } from "react-icons/gr";
 
-/* Custom arrow components (react-slick will pass className/style/onClick) */
-const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <button
-            aria-label="Previous slide"
-            className={`${className} !flex !items-center !justify-center bg-white/80 rounded-full p-2 shadow-md`}
-            style={{ ...style, zIndex: 2 }}
-            onClick={onClick}
-        >
-            <GrPrevious />
-        </button>
-    );
-};
+/* ⬅️ Previous Arrow */
+const PrevArrow = ({ onClick }) => (
+    <button
+        aria-label="Previous slide"
+        onClick={onClick}
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all duration-200 flex items-center justify-center"
+    >
+        <GrPrevious className="text-2xl sm:text-3xl" />
+    </button>
+);
 
-const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <button
-            aria-label="Next slide"
-            className={`${className} !flex !items-center !justify-center bg-white/80 rounded-full p-2 shadow-md`}
-            style={{ ...style, zIndex: 2 }}
-            onClick={onClick}
-        >
-            <GrNext />
-        </button>
-    );
-};
+/* ➡️ Next Arrow */
+const NextArrow = ({ onClick }) => (
+    <button
+        aria-label="Next slide"
+        onClick={onClick}
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all duration-200 flex items-center justify-center"
+    >
+        <GrNext className="text-2xl sm:text-3xl" />
+    </button>
+);
 
 const Banner = () => {
     const sliderRef = useRef(null);
@@ -42,40 +35,25 @@ const Banner = () => {
     const settings = {
         dots: true,
         infinite: true,
-        arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
-        adaptiveHeight: false,
-        swipeable: false,
-        emulateTouch: false,
-        stopOnHover: false,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
+        arrows: true,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    swipeToSlide: true,
-                    arrows: false, // hide arrows on small screens
-                },
-            },
-        ],
+        swipe: true,
+        draggable: true,
     };
 
     useEffect(() => {
-        // start autoplay if slider instance exists
         if (sliderRef.current && typeof sliderRef.current.slickPlay === "function") {
             sliderRef.current.slickPlay();
         }
     }, []);
 
     const images = [
-        // "/banner/banner1.png",
         "/banner/banner2.jpeg",
         "/banner/homebanner1.jpeg",
         "/banner/homebanner2.jpeg",
@@ -93,8 +71,7 @@ const Banner = () => {
         <div className="relative overflow-hidden">
             <Slider ref={sliderRef} {...settings}>
                 {images.map((src, idx) => (
-                    <div key={`${src}-${idx}`} className="w-full h-full">
-                        {/* parent must be relative when using Image fill */}
+                    <div key={idx} className="w-full h-full relative">
                         <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[580px]">
                             <Image
                                 src={src}
@@ -108,6 +85,10 @@ const Banner = () => {
                     </div>
                 ))}
             </Slider>
+
+            {/* External control buttons (so arrows always clickable) */}
+            <PrevArrow onClick={() => sliderRef.current?.slickPrev()} />
+            <NextArrow onClick={() => sliderRef.current?.slickNext()} />
         </div>
     );
 };

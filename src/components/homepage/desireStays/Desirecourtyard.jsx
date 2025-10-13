@@ -13,16 +13,21 @@ const courtyards = [
         id: "1.0",
         title: "Courtyard 1.0",
         images: [
-            
-            "/courtyard/third.jpg",
+
+            // "/courtyard/third.jpg",
             "/banner/newbanner.jpeg",
+            "/banner/colorimg.jpeg",
+            "/banner/homebanner1.jpeg",
+            "/banner/homebanner2.jpeg",
+            "/banner/homebanner3.jpeg",
+            "/banner/homebanner4.jpeg",
             "/courtyard/barthboom.jpeg",
+            // "/courtyard/toilet.jpeg",
             "/courtyard/room.jpeg",
             "/courtyard/room1.jpeg",
             "/courtyard/ten.jpeg",
-            "/courtyard/fifth.jpg",
+            // "/courtyard/fifth.jpg",
             "/courtyard/sixth.jpeg",
-            "/courtyard/seventh.jpg",
         ],
         fits: "8–10 Guests",
         bedrooms: 3,
@@ -61,7 +66,7 @@ const courtyards = [
         id: "3.0",
         title: "Courtyard 3.0",
         images: [
-             "/courtyard/sec.jpg",
+            "/courtyard/sec.jpg",
             "/courtyard/third.jpg",
             "/courtyard/barthboom.jpeg",
             "/courtyard/room.jpeg",
@@ -85,7 +90,7 @@ const courtyards = [
         id: "4.0",
         title: "Courtyard 4.0",
         images: [
-           "/courtyard/sec.jpg",
+            "/courtyard/sec.jpg",
             "/courtyard/third.jpg",
             "/courtyard/barthboom.jpeg",
             "/courtyard/room.jpeg",
