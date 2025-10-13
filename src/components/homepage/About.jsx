@@ -77,7 +77,7 @@ const About = () => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full px-6 md:px-12 lg:px-20 py-8 lg:gap-10 items-center">
             {/* Slider */}
-            <div className="relative">
+            <div className="relative lg:block hidden">
                 <div className="relative w-full">
                     <Slider ref={sliderRef} {...settings}>
                         {images.map((src, idx) => (

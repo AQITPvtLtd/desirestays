@@ -81,7 +81,7 @@ const Banner = () => {
         "/banner/banner4.jpeg",
         "/banner/banner5.jpeg",
         "/banner/banner6.jpeg",
-        // "/banner/banner7.jpeg",
+        "/banner/newbanner.jpeg",
         "/banner/banner8.jpeg",
     ];
 

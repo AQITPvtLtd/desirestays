@@ -15,6 +15,7 @@ const courtyards = [
         images: [
             "/courtyard/sec.jpg",
             "/courtyard/third.jpg",
+            "/banner/newbanner.jpeg",
             "/courtyard/barthboom.jpeg",
             "/courtyard/room.jpeg",
             "/courtyard/room1.jpeg",
