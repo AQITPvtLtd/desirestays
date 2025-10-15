@@ -14,7 +14,9 @@ export default function Home() {
       <div className="bg-[#eee1d8]">
         <About />
       </div>
-      <Services />
+      <div id='desire-stays'>
+        <Services />
+      </div>
       <div className="bg-[#eee1d8]">
         <Faq />
         <Video />
