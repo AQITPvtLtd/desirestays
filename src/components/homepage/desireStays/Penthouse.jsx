@@ -11,12 +11,20 @@ import Link from "next/link";
 
 const Penthouse = () => {
     const images = [
-        "/penthouse/first.jpg",
-        "/penthouse/second.jpg",
-        "/penthouse/third.jpg",
-        "/penthouse/fourth.jpg",
-        "/penthouse/fifth.jpg",
-        "/penthouse/sixth.jpg",
+        "/penthouse/image1.jpg",
+        "/penthouse/image2.jpg",
+        "/penthouse/image3.jpg",
+        "/penthouse/image5.jpg",
+        "/penthouse/image6.jpg",
+        "/penthouse/image7.jpg",
+        "/penthouse/image8.jpg",
+        "/penthouse/image9.jpg",
+        "/penthouse/image10.jpg",
+        "/penthouse/image11.jpg",
+        "/penthouse/image12.jpg",
+        "/penthouse/image13.jpg",
+        "/penthouse/image14.jpg",
+        "/penthouse/image15.jpg",
     ];
 
     const title = "Desire Penthouse";
@@ -49,6 +57,7 @@ const Penthouse = () => {
                     infiniteLoop
                     showThumbs={false}
                     showStatus={false}
+                    showIndicators={false}   // <<< indicators (dots) removed
                     interval={3000}
                     swipeable={false}
                     emulateTouch={false}
@@ -92,7 +101,7 @@ const Penthouse = () => {
 
                     <div className="mt-4 text-xl font-semibold text-gray-900">
                         ₹{pricePerNight.toLocaleString()}{" "}
-                        <span className="text-sm font-normal">/ night</span>
+                        <span className="text-sm font-normal">/ Night</span>
                     </div>
 
                     {/* Amenities */}

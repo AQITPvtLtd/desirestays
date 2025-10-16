@@ -4,17 +4,29 @@ import React from "react";
 import Image from "next/image";
 import { FaUserFriends, FaBed, FaBath, FaWifi, FaTv, FaCar, FaUtensils } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
-import { AiFillHeart } from "react-icons/ai";
+// import { AiFillHeart } from "react-icons/ai";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from "next/link";
 
 const Dreamdesire = () => {
     const images = [
-        "/dreamdesire/img2.avif",
-        "/dreamdesire/img1.avif",
-        "/dreamdesire/img3.avif",
-        "/dreamdesire/fourth.webp"
+        "/dreamdesire/image1.jpg",
+        "/dreamdesire/image2.jpg",
+        "/dreamdesire/image15.jpg",
+        "/dreamdesire/image5.jpg",
+        "/dreamdesire/image13.jpg",
+        "/dreamdesire/image6.jpg",
+        "/dreamdesire/image3.jpg",
+        "/dreamdesire/image4.jpg",
+        "/dreamdesire/image7.jpg",
+        "/dreamdesire/image8.jpg",
+        "/dreamdesire/image9.jpg",
+        "/dreamdesire/image10.jpg",
+        "/dreamdesire/image11.jpg",
+        "/dreamdesire/image12.jpg",
+        "/dreamdesire/image14.jpg",
+        "/dreamdesire/image16.jpg",
     ];
 
     const title = "Dream Desire";
@@ -47,6 +59,7 @@ const Dreamdesire = () => {
                     infiniteLoop
                     showThumbs={false}
                     showStatus={false}
+                    showIndicators={false}   // <<< indicators (dots) removed
                     interval={3000}
                     swipeable={false}
                     emulateTouch={false}
@@ -65,8 +78,6 @@ const Dreamdesire = () => {
                         </div>
                     ))}
                 </Carousel>
-
-
             </div>
 
             {/* RIGHT: Info */}
@@ -92,7 +103,7 @@ const Dreamdesire = () => {
 
                     <div className="mt-4 text-xl font-semibold text-gray-900">
                         ₹{pricePerNight.toLocaleString()}{" "}
-                        <span className="text-sm font-normal">/ night</span>
+                        <span className="text-sm font-normal">/ Night</span>
                     </div>
 
                     {/* Amenities */}
@@ -123,4 +134,4 @@ const Dreamdesire = () => {
     )
 }
 
-export default Dreamdesire
+export default Dreamdesire;

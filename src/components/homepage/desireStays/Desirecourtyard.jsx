@@ -11,27 +11,24 @@ import { MdWork } from "react-icons/md";
 const courtyards = [
     {
         id: "1.0",
-        title: "Courtyard 1.0",
+        title: "Courtyard 1.O",
         images: [
-
-            // "/courtyard/third.jpg",
-            "/banner/newbanner.jpeg",
-            "/banner/colorimg.jpeg",
-            "/banner/homebanner1.jpeg",
-            "/banner/homebanner2.jpeg",
-            "/banner/homebanner3.jpeg",
-            "/banner/homebanner4.jpeg",
-            "/courtyard/barthboom.jpeg",
-            // "/courtyard/toilet.jpeg",
-            "/courtyard/room.jpeg",
-            "/courtyard/room1.jpeg",
-            "/courtyard/ten.jpeg",
-            // "/courtyard/fifth.jpg",
-            "/courtyard/sixth.jpeg",
+            "/1.O/image1.jpeg",
+            "/1.O/image2.jpeg",
+            "/1.O/image3.jpeg",
+            "/1.O/image4.jpeg",
+            "/1.O/image5.jpeg",
+            "/1.O/image6.jpeg",
+            "/1.O/image7.jpeg",
+            "/1.O/image8.jpeg",
+            "/1.O/image9.jpeg",
+            "/1.O/image10.jpeg",
+            "/1.O/image11.jpeg",
+            "/1.O/image12.jpeg",
         ],
         fits: "8–10 Guests",
         bedrooms: 3,
-        bathrooms: 2,
+        bathrooms: 3,
         price: "₹8,000",
         description:
             "Three thoughtfully designed bedrooms, a well-equipped kitchen, and a charming vibrant lounge for small gatherings.",
@@ -40,18 +37,23 @@ const courtyards = [
     },
     {
         id: "2.0",
-        title: "Courtyard 2.0",
+        title: "Courtyard 2.O",
         images: [
-            "/courtyard/sec.jpg",
-            "/courtyard/third.jpg",
-            "/courtyard/barthboom.jpeg",
-            "/courtyard/room.jpeg",
-            "/courtyard/room1.jpeg",
-            "/courtyard/ten.jpeg",
-            "/courtyard/fifth.jpg",
-            "/courtyard/sixth.jpeg",
-            "/courtyard/seventh.jpg",
-            "/courtyard/nine.jpg",
+            "/2.O/image1.jpeg",
+            "/2.O/image2.jpeg",
+            "/2.O/image3.jpeg",
+            "/2.O/image4.jpeg",
+            "/2.O/image5.jpeg",
+            "/2.O/image6.jpeg",
+            "/2.O/image7.jpeg",
+            "/2.O/image8.jpeg",
+            "/2.O/image9.jpeg",
+            "/2.O/image10.jpeg",
+            "/2.O/image11.jpeg",
+            "/2.O/image12.jpeg",
+            "/2.O/image13.jpeg",
+            "/2.O/image14.jpeg",
+            "/2.O/image15.jpeg",
         ],
         fits: "4 guests per room",
         bedrooms: 3,
@@ -64,18 +66,14 @@ const courtyards = [
     },
     {
         id: "3.0",
-        title: "Courtyard 3.0",
+        title: "Courtyard 3.O",
         images: [
-            "/courtyard/sec.jpg",
-            "/courtyard/third.jpg",
-            "/courtyard/barthboom.jpeg",
-            "/courtyard/room.jpeg",
-            "/courtyard/room1.jpeg",
-            "/courtyard/ten.jpeg",
-            "/courtyard/fifth.jpg",
-            "/courtyard/sixth.jpeg",
-            "/courtyard/seventh.jpg",
-            "/courtyard/nine.jpg",
+            "/3.O/image1.jpg",
+            "/3.O/image2.jpg",
+            "/3.O/image3.jpg",
+            "/3.O/image4.jpg",
+            "/3.O/image5.jpg",
+            "/3.O/image6.jpg",
         ],
         fits: "Up to 15 Guests",
         bedrooms: 1,
@@ -88,18 +86,15 @@ const courtyards = [
     },
     {
         id: "4.0",
-        title: "Courtyard 4.0",
+        title: "Courtyard 4.O",
         images: [
-            "/courtyard/sec.jpg",
-            "/courtyard/third.jpg",
-            "/courtyard/barthboom.jpeg",
-            "/courtyard/room.jpeg",
-            "/courtyard/room1.jpeg",
-            "/courtyard/ten.jpeg",
-            "/courtyard/fifth.jpg",
-            "/courtyard/sixth.jpeg",
-            "/courtyard/seventh.jpg",
-            "/courtyard/nine.jpg",
+            "/4.O/image1.jpg",
+            "/4.O/image2.jpg",
+            "/4.O/image3.jpg",
+            "/4.O/image4.jpg",
+            "/4.O/image5.jpg",
+            "/4.O/image6.jpg",
+            "/4.O/image7.jpg",
         ],
         fits: "Up to 15 Guests",
         bedrooms: 2,
@@ -134,10 +129,12 @@ export default function Desirecourtyard() {
             <div className="w-full md:w-2/5 relative px-5">
                 <div className="rounded-2xl overflow-hidden">
                     <Carousel
+                        key={active.id}                // <<< ensures carousel remounts & resets when active changes
                         autoPlay
                         infiniteLoop
                         showThumbs={false}
                         showStatus={false}
+                        showIndicators={false}        // <<< removes the dots/indicators
                         interval={3000}
                         swipeable={false}
                         emulateTouch={false}
@@ -210,7 +207,7 @@ export default function Desirecourtyard() {
                 {/* Price */}
                 <div className="mt-4 text-xl font-bold text-gray-900">
                     ₹{active.price.replace(/[^0-9,.-]/g, "")?.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                    <span className="text-sm font-normal">/ night</span>
+                    <span className="text-sm font-normal">/ Night</span>
                 </div>
 
                 {/* Description */}
